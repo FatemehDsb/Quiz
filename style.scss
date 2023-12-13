@@ -8,9 +8,9 @@ $button-hover-color: darken($primary-color, 10%);
 $border-color: #dddddd;
 
 
-$table-bg: #ffffff; // White background for table
-$table-header-bg: $primary-color; // Use primary color for header
-$table-header-color: #ffffff; // White text for header
+$table-bg: #ffffff; //
+$table-header-bg: $primary-color; 
+$table-header-color: #ffffff; 
 $table-border-color: $border-color;
 $table-row-hover-bg: lighten($secondary-color, 10%);
 
@@ -28,31 +28,29 @@ body {
     color: $text-color;
 }
 
+
+
     .container {
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        
         width: 70%;
         margin-top: 20px;
-        justify-content: space-between;
+        justify-content: space-around;
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 5px;
-        border:1px solid black;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 
-        //  .question-container {
-        //     margin-bottom: 20px;
-        // }
-
-        // .score-container{
-        //     margin-top: 40px;
-        // }
-
-
+        .score-container{
+            border: 1px solid black;
+        }
 
         h3 {
              color: $primary-color;
              font-weight: 700;
+             font-size: 15px;
              margin-bottom: 10px;
         }
 
@@ -83,7 +81,8 @@ body {
         }
 
         .result-table {
-            width: 50%;
+            width: 100%;
+            border: 1px solid;
             border-collapse: collapse;
             font-family: "Barlow", sans-serif;
            
@@ -112,6 +111,7 @@ body {
 
   
 .change-mode-container {
+   
     position: fixed;
     top: 20px;
     right: 10px;
@@ -121,6 +121,7 @@ body {
     img{
         width:20px;
         height: 20px;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     }
     
 

@@ -13,18 +13,24 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 70%;
   margin-top: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+.container .score-container {
   border: 1px solid black;
 }
 .container h3 {
   color: #4ca7af;
   font-weight: 700;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 .container label {
@@ -47,7 +53,8 @@ body {
   background-color: #3d858b;
 }
 .container .result-table {
-  width: 50%;
+  width: 100%;
+  border: 1px solid;
   border-collapse: collapse;
   font-family: "Barlow", sans-serif;
 }
@@ -77,4 +84,5 @@ body {
 .change-mode-container img {
   width: 20px;
   height: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=style.css.map */

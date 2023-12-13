@@ -12,7 +12,7 @@ let scores;
 let resultTable;
 
 
-
+//declaring an array of correct answers
 let correctAnswers=[
   { question: "Question1", correctAnswer: "yes" },
   { question: "Question2", correctAnswer: "30" },
@@ -113,7 +113,6 @@ submitBtn.addEventListener("click", () =>{
 
     // Function to display results
   const displayResults = (questionResults) => {
-
   const container = document.querySelector('.container');
 
   // Create a table for questions and answers
@@ -172,9 +171,9 @@ submitBtn.addEventListener("click", () =>{
 
   // Display the user's score
   const scoreContainer = document.querySelector('.score-container');
-  scoreContainer.textContent = `Ditt resultat: ${questionResults.scores} av ${correctAnswers.length} rätt (${percentage.toFixed(2)}%)`;
+  scoreContainer.textContent = `Ditt resultat: ${questionResults.scores} av ${correctAnswers.length} rätt (${percentage}%)`;
 
-  // Apply different styles based on the percentage
+  //  different colors based on the percentage
   if (percentage < 50) {
     scoreContainer.style.color = 'red';
     scoreContainer.style.fontWeight = 'bold';
@@ -185,8 +184,6 @@ submitBtn.addEventListener("click", () =>{
     scoreContainer.style.color = 'green';
     scoreContainer.style.fontWeight = 'bold';
   }
-
-
 
      // Display results
   displayResults(questionResults);
