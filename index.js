@@ -9,6 +9,7 @@ let results=[];
 let scores;
 let resultTable;
 
+const container = document.querySelector('.container');
 
 //declaring an array of correct answers
 let correctAnswers=[
@@ -103,7 +104,7 @@ submitBtn.addEventListener("click", () =>{
 
     // Function to display results
   const displayResults = (questionResults) => {
-  const container = document.querySelector('.container');
+  
 
   // Create a table for questions and answers
   resultTable = document.createElement("table");
@@ -119,7 +120,7 @@ submitBtn.addEventListener("click", () =>{
     const questionCell = row.insertCell(0);
     const answerCell = row.insertCell(1);
 
-    // Add question and answer to the respective cells
+    // Add question and answer 
     questionCell.textContent = ` ${index + 1}: ${question}`;
     answerCell.textContent = ` ${answer}`;
 
@@ -133,9 +134,9 @@ submitBtn.addEventListener("click", () =>{
             )
           : userAnswers[index].answer === correctAnswers[index].correctAnswer
       ) {
-        answerCell.style.color = "green"; // Correct answer, color it green
+        answerCell.style.color = "green"; 
       } else {
-        answerCell.style.color = "red"; // Incorrect answer, color it red
+        answerCell.style.color = "red"; 
       }
     }
  
@@ -203,6 +204,7 @@ changeModeBtn.addEventListener("click", () => {
 
   if (isDarkMode) {
       document.body.style.backgroundColor = 'black';
+      
       document.body.style.color = 'darkGray';
       
     
@@ -214,6 +216,7 @@ changeModeBtn.addEventListener("click", () => {
     } else {
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
+      
 
 
       // Change the image source for light mode
