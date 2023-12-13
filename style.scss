@@ -45,6 +45,8 @@ body {
 
         .score-container{
             border: 1px solid black;
+           
+       
         }
 
         h3 {
@@ -85,12 +87,12 @@ body {
             border: 1px solid;
             border-collapse: collapse;
             font-family: "Barlow", sans-serif;
-           
+         
         
 
             th, td {
                 padding: 12px;
-                border: 1px solid #ddd;
+                border: 1px solid #b1adad;
                 text-align: left;
                 font-size: 0.8rem;
             }
@@ -116,8 +118,6 @@ body {
     top: 20px;
     right: 10px;
    
-    border: none;
-
     img{
         width:20px;
         height: 20px;

@@ -6,8 +6,6 @@ let submitBtn = document.querySelector("#submitAnswersBtn");
 
 let selectedAnswersQue3Value=[]; 
 let results=[];
-let correctResult ;
-let incorrectResult ;
 let scores;
 let resultTable;
 
@@ -28,8 +26,6 @@ let correctAnswers=[
 
    //make a function to compare arrays of useranswers and correctanswers 
    const CompareUserAnsVsCorrectAns = (userAnswers, correctAnswers)=>{
-     correctResult = [];
-     incorrectResult = [];
      scores=0;
 
      //compare userAnswers with correctedAnswers
@@ -45,22 +41,18 @@ let correctAnswers=[
 
           if (isCorrect) {
               scores++;
-              correctResult.push(`Fråga ${index + 1} är korrekt!`);
+              
              
              
           } else {
-              incorrectResult.push(`Fråga ${index + 1} är fel!`);
+          
           }
       } else {
           // compare singel choice
           if (userAnswer.answer === correctAnswers[index].correctAnswer) {
               scores++;
-              correctResult.push(`Fråga ${index + 1} är korrekt!`);
-          } else {
-            
-              incorrectResult.push(`Fråga ${index + 1} är fel!`);
-
-          }
+           
+          } 
       }
     });
 
@@ -68,9 +60,7 @@ let correctAnswers=[
 
     return {
       scores: scores,
-      correctResult: correctResult,
-      incorrectResult: incorrectResult,
-
+    
     };
   };
 
@@ -92,8 +82,8 @@ submitBtn.addEventListener("click", () =>{
     let SelectedAnserwQue8= document.querySelector("[name='eighthQu']:checked").value;
     let SelectedAnserwQue9= document.querySelector("[name='ninthQu']:checked").value;
     let SelectedAnserwQue10= document.querySelector("[name='tenthhQu']:checked").value;
-     /// make an array of users input 
-
+    
+ /// make an array of users input 
     let userAnswers = [
         { question: "Question1", answer: SelectedAnserwQue1 },
         { question: "Question2", answer: SelectedAnswerQue2 },
@@ -160,10 +150,13 @@ submitBtn.addEventListener("click", () =>{
     question.style.display = 'none';
     
   });
-
+  
   //Hide sumbit button
-
   submitBtn.style.display="none";
+
+  //Hide title
+  let title= document.querySelector('h1');
+  title.style.display="none";
 
 
   // Calculate the percentage of correct answers
@@ -201,7 +194,6 @@ let changeModeBtn = document.querySelector("#changeModeBtn");
 let changeModeImage = document.querySelector("#modImg");
 let isDarkMode = false;
 
- resultTable = document.getElementById("resultTable");
 
 changeModeBtn.addEventListener("click", () => {
   // Toggle between light and dark mode
@@ -212,22 +204,18 @@ changeModeBtn.addEventListener("click", () => {
   if (isDarkMode) {
       document.body.style.backgroundColor = 'black';
       document.body.style.color = 'darkGray';
-     
-      if (resultTable) {
-        resultTable.style.backgroundColor = 'black';
-    }
+      
     
+     
       // Change the image for dark mode
       changeModeImage.src = "light (1).png";
       changeModeImage.alt = "";
+      
     } else {
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
 
-      if (resultTable) {
-        resultTable.style.backgroundColor = 'red';
-    }
-     
+
       // Change the image source for light mode
       changeModeImage.src = "moon.png";
       changeModeImage.alt = "Light Mode Image";

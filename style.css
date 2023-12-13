@@ -60,7 +60,7 @@ body {
 }
 .container .result-table th, .container .result-table td {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #b1adad;
   text-align: left;
   font-size: 0.8rem;
 }
@@ -79,7 +79,6 @@ body {
   position: fixed;
   top: 20px;
   right: 10px;
-  border: none;
 }
 .change-mode-container img {
   width: 20px;
