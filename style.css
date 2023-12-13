@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.container {
+  width: 70%;
+  margin-top: 20px;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.container h3 {
+  color: #4ca7af;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.container label {
+  font-size: 0.6rem;
+}
+.container input[type=radio], .container input[type=checkbox] {
+  margin-right: 10px;
+}
+.container #submitAnswersBtn {
+  padding: 10px 20px;
+  background-color: #4ca7af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.container #submitAnswersBtn:hover {
+  background-color: #3d858b;
+}
+.container .result-table {
+  width: 50%;
+  border-collapse: collapse;
+  font-family: "Barlow", sans-serif;
+}
+.container .result-table th, .container .result-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.8rem;
+}
+.container .result-table th {
+  background-color: #4ca7af;
+  color: #ffffff;
+}
+.container .result-table td {
+  background-color: white;
+}
+.container .result-table td:hover {
+  background-color: #e0e0e0;
+}
+
+.change-mode-container {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  border: none;
+}
+.change-mode-container img {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */

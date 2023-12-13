@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankademin Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body >
+<!--Result table -->
+  <div class="result-table-container">
+    <table id="resultTable" class="result-table"></table>
+</div>
+<!--Change mode button -->
+  <div class="change-mode-container">
+    <button id="changeModeBtn" ><img id="modImg" src="moon.png"></button>
+  </div>
+  <!---->
+ <div class="container">
+  
+    <div class="score-container"></div> 
+
+    <div class="question-container" id="question1"> 
+      <h3> Question one: ?</h3 >
+      <label for="QusOneYes">Yes</label>
+      <input type="radio" id="QusOneYes"  name="firstQu" value="yes" checked>
+      
+      <label for="QusOneNo">No</label>
+      <input type="radio" id="QusOneNo"  name="firstQu" value="no" >
+      
+      </div>
+      <br><br>
+      
+    <div class="question-container" id="question2">
+      
+      <h3 >Question two: ?</h3>
+      <label for="">20</label>
+      <input type="radio" id="twentySt" name="secondQue" value="20" checked>
+      
+      <label for="">25</label>
+      <input type="radio" id="twentyFiveSt"  name="secondQue" value="25">
+      
+      <label for="">30</label>
+      <input type="radio" id="thirtySt"  name="secondQue" value="30">
+      
+      <label for="">35</label>
+      <input type="radio" id="thirtyFiveSt"  name="secondQue" value="35">
+      
+    </div>
+      <br><br>
+      
+    
+      <div class="question-container" id="question3">
+      <h3>Question three: select multiple choices? </h3>
+
+      <label for="optOne">option1</label>
+      <input type="checkbox" id="optOne"  name="multiQueThree" value="option1">
+      
+      <label for="optTwo">option2</label>
+      <input type="checkbox" id="optTwo"  name="multiQueThree" value="option2">
+      
+      <label for="optThree">option3</label>
+      <input type="checkbox" id="optThree"  name="multiQueThree" value="option3">
+      
+      <label for="optFour">option4</label>
+      <input type="checkbox" id="optFour" name="multiQueThree" value="option4">
+      </div>
+      <br><br>
+
+
+      <div class="question-container" id="question4"> 
+        <h3> Question four:</h3 >
+        <label for="QusFourYes">Yes</label>
+        <input type="radio" id="QusFourYes"  name="fourthQu" value="yes" checked>
+        
+        <label for="QusFourNo">No</label>
+        <input type="radio" id="QusFourNo"  name="fourthQu" value="no" >
+        
+        </div>
+        <br><br>
+        
+        
+        
+        <div class="question-container" id="question5">
+        <h3 >Question five: </h3>
+
+        <label for="">20</label>
+        <input type="radio" id="twentySt" name="fifthQue" value="20" checked>
+        
+        <label for="">25</label>
+        <input type="radio" id="twentyFiveSt"  name="fifthQue" value="25">
+        
+        <label for="">30</label>
+        <input type="radio" id="thirtySt"  name="fifthQue" value="30">
+        
+        <label for="">35</label>
+        <input type="radio" id="thirtyFiveSt"  name="fifthQue" value="35">
+        
+        </div>
+        <br><br>
+        
+        <div class="question-container" id="question6">
+        <h3>Question six: select multiple choice:</h3>
+
+        <label for="optOne">option1</label>
+        <input type="checkbox" id="optOne" name="multiQuesix" value="option1">
+        
+        <label for="optTwo">option2</label>
+        <input type="checkbox" id="optTwo" name="multiQuesix" value="option2">
+        
+        <label for="optThree">option3</label>
+        <input type="checkbox" id="optThree"  name="multiQuesix" value="option3">
+        
+        <label for="optFour">option4</label>
+        <input type="checkbox" id="optFour" name="multiQuesix" value="option4">
+        </div>
+        <br><br>
+      
+    
+      <!--Submit Answers-->
+  <button id="submitAnswersBtn">Submit answers</button>
+ </div>
+</body>
+</html>
