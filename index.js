@@ -1,8 +1,9 @@
 
 
 //Träffa submit knapp
-
 let submitBtn = document.querySelector("#submitAnswersBtn");
+
+
 let selectedAnswersQue3Value=[]; 
 let results=[];
 let correctResult ;
@@ -18,7 +19,11 @@ let correctAnswers=[
   { question: "Question3",  correctAnswer: ["option1", "option2"] } ,
   { question: "Question4", correctAnswer: "yes" },
   { question: "Question5", correctAnswer: "30" },
-  { question: "Question6",  correctAnswer: ["option1", "option2"] } 
+  { question: "Question6",  correctAnswer: ["option1", "option2"] } ,
+  { question: "Question7", correctAnswer: "yes" },
+  { question: "Question8", correctAnswer: "no" },
+  { question: "Question9", correctAnswer: "yes" },
+  { question: "Question10", correctAnswer: "no" },
 ]
 
    //make a function to compare arrays of useranswers and correctanswers 
@@ -26,11 +31,15 @@ let correctAnswers=[
      correctResult = [];
      incorrectResult = [];
      scores=0;
+
      //compare userAnswers with correctedAnswers
      userAnswers.forEach((userAnswer, index) => {
+      //check if the answer property of the userAnswer object is an array.
       if (Array.isArray(userAnswer.answer))
        {
-          // Jämför arrayer för flervalsfrågor
+          // multiple-choice compare
+
+  //checks if the length of the user's answer array  equal to  the correct answer array for a  question.
           let isCorrect = userAnswer.answer.length === correctAnswers[index].correctAnswer.length &&
                           userAnswer.answer.every(ans => correctAnswers[index].correctAnswer.includes(ans));
 
@@ -43,7 +52,7 @@ let correctAnswers=[
               incorrectResult.push(`Fråga ${index + 1} är fel!`);
           }
       } else {
-          // Jämför enstaka svar
+          // compare singel choice
           if (userAnswer.answer === correctAnswers[index].correctAnswer) {
               scores++;
               correctResult.push(`Fråga ${index + 1} är korrekt!`);
@@ -79,7 +88,10 @@ submitBtn.addEventListener("click", () =>{
     selectedAnswersQue3.forEach((checkbox)=>{
        selectedAnswersQue3Value.push(checkbox.value);
      });
- 
+    let SelectedAnserwQue7= document.querySelector("[name='seventhQu']:checked").value;
+    let SelectedAnserwQue8= document.querySelector("[name='eighthQu']:checked").value;
+    let SelectedAnserwQue9= document.querySelector("[name='ninthQu']:checked").value;
+    let SelectedAnserwQue10= document.querySelector("[name='tenthhQu']:checked").value;
      /// make an array of users input 
 
     let userAnswers = [
@@ -88,7 +100,11 @@ submitBtn.addEventListener("click", () =>{
         { question: "Question3", answer: selectedAnswersQue3Value },
         { question: "Question4", answer: SelectedAnserwQue1 },
         { question: "Question5", answer: SelectedAnswerQue2 },
-        { question: "Question6", answer: selectedAnswersQue3Value }
+        { question: "Question6", answer: selectedAnswersQue3Value },
+        { question: "Question7", answer: SelectedAnserwQue7 },
+        { question: "Question8", answer: SelectedAnserwQue8 },
+        { question: "Question9", answer: SelectedAnserwQue9 },
+        { question: "Question10", answer: SelectedAnserwQue10 },
     ];
 
 
@@ -99,7 +115,7 @@ submitBtn.addEventListener("click", () =>{
   const displayResults = (questionResults) => {
 
   const container = document.querySelector('.container');
-  
+
   // Create a table for questions and answers
   resultTable = document.createElement("table");
   resultTable.classList.add("result-table");
@@ -135,7 +151,7 @@ submitBtn.addEventListener("click", () =>{
     }
  
 
-  // Append the result table to the container
+ 
   container.appendChild(resultTable);
   
 };
@@ -149,7 +165,6 @@ submitBtn.addEventListener("click", () =>{
   //Hide sumbit button
 
   submitBtn.style.display="none";
-
 
 
   // Calculate the percentage of correct answers
