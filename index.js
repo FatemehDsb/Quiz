@@ -8,6 +8,7 @@ let selectedAnswersQue3Value=[];
 let results=[];
 let scores;
 let resultTable;
+let currentQuestionIndex = 1;
 
 const container = document.querySelector('.container');
 
@@ -64,6 +65,41 @@ let correctAnswers=[
     
     };
   };
+
+  //
+
+
+  // Function to show the current question
+const showCurrentQuestion = () => {
+  document.querySelectorAll('.question-container').forEach((question, index) => {
+      question.style.display = index + 1 === currentQuestionIndex ? 'block' : 'none';
+  });
+};
+
+// Träffa next question knapp
+let nextQuestionBtn = document.querySelector("#nextQuestionBtn");
+
+nextQuestionBtn.addEventListener("click", () => {
+  // Hide the current question
+  document.getElementById(`question${currentQuestionIndex}`).style.display = 'none';
+
+  // Move to the next question
+  currentQuestionIndex++;
+
+  // If all questions are answered, show the submit button
+  if (currentQuestionIndex > 10) {
+      nextQuestionBtn.style.display = 'none';
+      document.querySelector("#submitAnswersBtn").style.display = 'block';
+  } else {
+      // Show the next question
+      showCurrentQuestion();
+  }
+});
+
+// Initialize by showing the first question
+showCurrentQuestion();
+
+//
 
 
 
@@ -145,6 +181,7 @@ submitBtn.addEventListener("click", () =>{
   container.appendChild(resultTable);
   
 };
+
 
   // Hide questions
   document.querySelectorAll('.question-container').forEach(question => {

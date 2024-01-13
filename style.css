@@ -17,15 +17,33 @@ body {
   flex-direction: column;
   width: 70%;
   margin-top: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  background-color: gray;
+}
+.container .questions {
+  border: 1px solid yellow;
+}
+.container .questions h1 {
+  border: 1px solid pink;
+}
+.container .buttons {
+  border: 1px solid purple;
+  display: flex;
+  flex-direction: column;
+}
+.container .question-container {
+  display: none;
+  border: 1px solid rgb(229, 22, 22);
 }
 .container .score-container {
   border: 1px solid black;
+  background-color: blue;
 }
 .container h3 {
   color: #4ca7af;
@@ -48,6 +66,7 @@ body {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
+  border: 1px solid rgb(229, 22, 22);
 }
 .container #submitAnswersBtn:hover {
   background-color: #3d858b;

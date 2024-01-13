@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankademin Quiz</title>
     <link rel="stylesheet" href="style.css">
+    
     <script src="index.js" defer></script>
 </head>
 <body >
@@ -14,9 +15,18 @@
     <button id="changeModeBtn" ><img id="modImg" src="moon.png"></button>
   </div>
   <!---->
+
+
+  
+
  <div class="container">
-  <h1>Please Answer questions!</h1><br><br>
-    <div class="score-container"></div> 
+
+   
+
+  <div class="questions">
+  
+    <h1>Please Answer questions!</h1><br><br>
+  
 
     <div class="question-container" id="question1"> 
       <h3> Question one: ?</h3 >
@@ -27,7 +37,7 @@
       <input type="radio" id="QusOneNo"  name="firstQu" value="no" >
       
       </div>
-      <br><br>
+      
       
     <div class="question-container" id="question2">
       
@@ -45,7 +55,7 @@
       <input type="radio" id="thirtyFiveSt"  name="secondQue" value="35">
       
     </div>
-      <br><br>
+    
       
     
       <div class="question-container" id="question3">
@@ -63,7 +73,7 @@
       <label for="optFour">option4</label>
       <input type="checkbox" id="optFour" name="multiQueThree" value="option4">
       </div>
-      <br><br>
+     
 
 
       <div class="question-container" id="question4"> 
@@ -75,7 +85,7 @@
         <input type="radio" id="QusFourNo"  name="fourthQu" value="no" >
         
         </div>
-        <br><br>
+       
         
         
         
@@ -95,7 +105,7 @@
         <input type="radio" id="thirtyFiveSt"  name="fifthQue" value="35">
         
         </div>
-        <br><br>
+       
         
         <div class="question-container" id="question6">
         <h3>Question six: select multiple choice:</h3>
@@ -112,7 +122,7 @@
         <label for="optFour">option4</label>
         <input type="checkbox" id="optFour" name="multiQuesix" value="option4">
         </div>
-        <br><br>
+        
 
         <div class="question-container" id="question7"> 
           <h3> Question seven: ?</h3 >
@@ -123,7 +133,7 @@
           <input type="radio" id="QusSevenNo"  name="seventhQu" value="no" >
           
           </div>
-          <br><br>
+         
 
           <div class="question-container" id="question8"> 
             <h3> Question eight: ?</h3 >
@@ -134,7 +144,7 @@
             <input type="radio" id="QusEightNo"  name="eighthQu" value="no" >
             
             </div>
-            <br><br>
+            
 
             <div class="question-container" id="question9"> 
               <h3> Question nine: ?</h3 >
@@ -145,7 +155,7 @@
               <input type="radio" id="QusNineNo"  name="ninthQu" value="no" >
               
               </div>
-              <br><br>
+             
       
 
               <div class="question-container" id="question10"> 
@@ -157,10 +167,24 @@
                 <input type="radio" id="QusTenNo"  name="tenthhQu" value="no" >
                 
                 </div>
-                <br><br>
-    
-      <!--Submit Answers-->
-  <button id="submitAnswersBtn">Submit answers</button>
+                
+         </div>
+
+         <div class="buttons">
+
+           
+           <!-- Next button -->
+           <button id="nextQuestionBtn">Next Question</button>
+           
+           <!-- Submit Answers -->
+           <button id="submitAnswersBtn">Submit answers</button>
+           
+          </div>
+
+
+          <div class="score-container"></div> 
+
+ 
  </div>
 </body>
 </html>
