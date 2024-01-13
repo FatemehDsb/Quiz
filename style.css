@@ -1,97 +1,120 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-color: #f4f6f7;
+  --secondary-color: #f5f5f5;
+  --text-color: #333333;
+  --button-hover-color: darken(var(--primary-color), 10%);
+  --border-color: #dddddd;
+}
+
 * {
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: #f5f5f5;
-  color: #333333;
+  background-image: url(annie-spratt-qyAka7W5uMY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin-top: 20px;
+  margin: 20px auto;
   justify-content: space-between;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid black;
-  background-color: gray;
+  background-color: rgba(51, 51, 51, 0.3960784314);
 }
-.container .questions {
-  border: 1px solid yellow;
+
+.questions {
+  padding: 20px;
+  margin-bottom: 20px;
 }
-.container .questions h1 {
-  border: 1px solid pink;
+.questions h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
-.container .buttons {
-  border: 1px solid purple;
+
+.buttons {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+  margin: auto;
 }
-.container .question-container {
+
+.question-container {
   display: none;
-  border: 1px solid rgb(229, 22, 22);
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  margin: 10px 0;
 }
-.container .score-container {
-  border: 1px solid black;
-  background-color: blue;
-}
-.container h3 {
-  color: #4ca7af;
-  font-weight: 700;
-  font-size: 15px;
+.question-container h3 {
+  color: var(--primary-color);
+  font-weight: 200;
+  font-size: 18px;
   margin-bottom: 10px;
 }
-.container label {
-  font-size: 0.6rem;
+.question-container label {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
-.container input[type=radio], .container input[type=checkbox] {
+.question-container input[type=radio],
+.question-container input[type=checkbox] {
   margin-right: 10px;
+  padding: 5px;
+  border-radius: 3px;
 }
-.container #submitAnswersBtn {
+
+#submitAnswersBtn {
   padding: 10px 20px;
-  background-color: #4ca7af;
+  background-color: rgba(128, 128, 128, 0.289);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-  border: 1px solid rgb(229, 22, 22);
-}
-.container #submitAnswersBtn:hover {
-  background-color: #3d858b;
-}
-.container .result-table {
-  width: 100%;
-  border: 1px solid;
-  border-collapse: collapse;
-  font-family: "Barlow", sans-serif;
-}
-.container .result-table th, .container .result-table td {
-  padding: 12px;
-  border: 1px solid #b1adad;
-  text-align: left;
   font-size: 0.8rem;
+  transition: background-color 0.3s;
+  border: 1px solid var(--border-color);
+  width: 80%;
+  margin: auto;
 }
-.container .result-table th {
-  background-color: #4ca7af;
-  color: #ffffff;
+#submitAnswersBtn:hover {
+  background-color: rgba(255, 0, 0, 0.17);
 }
-.container .result-table td {
-  background-color: white;
+
+#nextQuestionBtn {
+  padding: 10px 20px;
+  background-color: rgba(78, 254, 125, 0.289);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+  border: 1px solid var(--border-color);
 }
-.container .result-table td:hover {
-  background-color: #e0e0e0;
+#nextQuestionBtn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.score-container {
+  border: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .change-mode-container {
@@ -103,4 +126,37 @@ body {
   width: 20px;
   height: 20px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes flyAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 0;
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+.airplane {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 50px; /* Adjust the size of the airplane */
+  height: 50px;
+  opacity: 0;
+  animation: flyAnimation 10s infinite;
 }/*# sourceMappingURL=style.css.map */
