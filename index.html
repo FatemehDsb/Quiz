@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankademin Quiz</title>
+    <title>Travel Quiz</title>
     <link rel="stylesheet" href="style.css">
     
     <script src="index.js" defer></script>
@@ -26,149 +26,118 @@
 
   <div class="questions">
   
-    <h1>Please Answer questions!</h1><br><br>
+    <h1> Travel Quiz!</h1><br><br>
   
 
-    <div class="question-container" id="question1"> 
-      <h3> Question one: ?</h3 >
-      <label for="QusOneYes">Yes</label>
-      <input type="radio" id="QusOneYes"  name="firstQu" value="yes" checked>
-      
-      <label for="QusOneNo">No</label>
-      <input type="radio" id="QusOneNo"  name="firstQu" value="no" >
-      
-      </div>
-      
-      
-    <div class="question-container" id="question2">
-      
-      <h3 >Question two: ?</h3>
-      <label for="">20</label>
-      <input type="radio" id="twentySt" name="secondQue" value="20" checked>
-      
-      <label for="">25</label>
-      <input type="radio" id="twentyFiveSt"  name="secondQue" value="25">
-      
-      <label for="">30</label>
-      <input type="radio" id="thirtySt"  name="secondQue" value="30">
-      
-      <label for="">35</label>
-      <input type="radio" id="thirtyFiveSt"  name="secondQue" value="35">
-      
-    </div>
-    
-      
-    
-      <div class="question-container" id="question3">
-      <h3>Question three: select multiple choices? </h3>
+     <!-- Question 1 -->
+     <div class="question-container" id="question1"> 
+      <h3>Which country is known as the Land of the Rising Sun?</h3>
+      <label for="q1a">a) China</label>
+      <input type="radio" id="q1a"  name="q1" value="China">
+      <label for="q1b">b) Japan</label>
+      <input type="radio" id="q1b"  name="q1" value="Japan">
+      <label for="q1c">c) Australia</label>
+      <input type="radio" id="q1c"  name="q1" value="Australia">
+  </div>
 
-      <label for="optOne">option1</label>
-      <input type="checkbox" id="optOne"  name="multiQueThree" value="option1">
-      
-      <label for="optTwo">option2</label>
-      <input type="checkbox" id="optTwo"  name="multiQueThree" value="option2">
-      
-      <label for="optThree">option3</label>
-      <input type="checkbox" id="optThree"  name="multiQueThree" value="option3">
-      
-      <label for="optFour">option4</label>
-      <input type="checkbox" id="optFour" name="multiQueThree" value="option4">
-      </div>
-     
+  <!-- Question 2 -->
+  <div class="question-container" id="question2">
+      <h3>What is the capital city of Brazil?</h3>
+      <label for="q2a">a) Rio de Janeiro</label>
+      <input type="radio" id="q2a" name="q2" value="Rio de Janeiro">
+      <label for="q2b">b) Brasília</label>
+      <input type="radio" id="q2b"  name="q2" value="Brasília">
+      <label for="q2c">c) São Paulo</label>
+      <input type="radio" id="q2c"  name="q2" value="São Paulo">
+  </div>
 
+  <!-- Question 3 -->
+  <div class="question-container" id="question3">
+      <h3>In which European city can you find the famous Eiffel Tower?</h3>
+      <label for="q3a">a) London</label>
+      <input type="radio" id="q3a"  name="q3" value="London">
+      <label for="q3b">b) Paris</label>
+      <input type="radio" id="q3b"  name="q3" value="Paris">
+      <label for="q3c">c) Rome</label>
+      <input type="radio" id="q3c" name="q3" value="Rome">
+  </div>
 
-      <div class="question-container" id="question4"> 
-        <h3> Question four:</h3 >
-        <label for="QusFourYes">Yes</label>
-        <input type="radio" id="QusFourYes"  name="fourthQu" value="yes" checked>
-        
-        <label for="QusFourNo">No</label>
-        <input type="radio" id="QusFourNo"  name="fourthQu" value="no" >
-        
-        </div>
-       
-        
-        
-        
-        <div class="question-container" id="question5">
-        <h3 >Question five: </h3>
+  <!-- Question 4 -->
+  <div class="question-container" id="question4"> 
+      <h3>Machu Picchu, an ancient Incan city, is located in which country?</h3>
+      <label for="q4a">a) Mexico</label>
+      <input type="radio" id="q4a"  name="q4" value="Mexico">
+      <label for="q4b">b) Peru</label>
+      <input type="radio" id="q4b"  name="q4" value="Peru">
+      <label for="q4c">c) Chile</label>
+      <input type="radio" id="q4c"  name="q4" value="Chile">
+  </div>
 
-        <label for="">20</label>
-        <input type="radio" id="twentySt" name="fifthQue" value="20" checked>
-        
-        <label for="">25</label>
-        <input type="radio" id="twentyFiveSt"  name="fifthQue" value="25">
-        
-        <label for="">30</label>
-        <input type="radio" id="thirtySt"  name="fifthQue" value="30">
-        
-        <label for="">35</label>
-        <input type="radio" id="thirtyFiveSt"  name="fifthQue" value="35">
-        
-        </div>
-       
-        
-        <div class="question-container" id="question6">
-        <h3>Question six: select multiple choice:</h3>
+  <!-- Question 5 -->
+  <div class="question-container" id="question5">
+      <h3>Which African country is known as the "Rainbow Nation"?</h3>
+      <label for="q5a">a) Egypt</label>
+      <input type="radio" id="q5a" name="q5" value="Egypt">
+      <label for="q5b">b) South Africa</label>
+      <input type="radio" id="q5b"  name="q5" value="South Africa">
+      <label for="q5c">c) Kenya</label>
+      <input type="radio" id="q5c"  name="q5" value="Kenya">
+  </div>
 
-        <label for="optOne">option1</label>
-        <input type="checkbox" id="optOne" name="multiQuesix" value="option1">
-        
-        <label for="optTwo">option2</label>
-        <input type="checkbox" id="optTwo" name="multiQuesix" value="option2">
-        
-        <label for="optThree">option3</label>
-        <input type="checkbox" id="optThree"  name="multiQuesix" value="option3">
-        
-        <label for="optFour">option4</label>
-        <input type="checkbox" id="optFour" name="multiQuesix" value="option4">
-        </div>
-        
-
-        <div class="question-container" id="question7"> 
-          <h3> Question seven: ?</h3 >
-          <label for="QusSevenYes">Yes</label>
-          <input type="radio" id="QusSevenYes"  name="seventhQu" value="yes" checked>
-          
-          <label for="QusSevenNo">No</label>
-          <input type="radio" id="QusSevenNo"  name="seventhQu" value="no" >
-          
-          </div>
-         
-
-          <div class="question-container" id="question8"> 
-            <h3> Question eight: ?</h3 >
-            <label for="QusEightYes">Yes</label>
-            <input type="radio" id="QusEightYes"  name="eighthQu" value="yes" checked>
-            
-            <label for="QusEightNo">No</label>
-            <input type="radio" id="QusEightNo"  name="eighthQu" value="no" >
-            
-            </div>
-            
-
-            <div class="question-container" id="question9"> 
-              <h3> Question nine: ?</h3 >
-              <label for="QusNineYes">Yes</label>
-              <input type="radio" id="QusNineYes"  name="ninthQu" value="yes" checked>
-              
-              <label for="QusNineNo">No</label>
-              <input type="radio" id="QusNineNo"  name="ninthQu" value="no" >
-              
-              </div>
-             
-      
-
-              <div class="question-container" id="question10"> 
-                <h3> Question ten: ?</h3 >
-                <label for="QusTenYes">Yes</label>
-                <input type="radio" id="QusTenYes"  name="tenthhQu" value="yes" checked>
+  <!-- Question 6 -->
+  <div class="question-container" id="question6">
+      <h3>What is the largest island in the world?</h3>
+      <label for="q6a">a) Australia</label>
+      <input type="radio" id="q6a" name="q6" value="Australia">
+      <label for="q6b">b) Greenland</label>
+      <input type="radio" id="q6b" name="q6" value="Greenland">
+      <label for="q6c">c) Borneo</label>
+      <input type="radio" id="q6c"  name="q6" value="Borneo">
+  </div>
                 
-                <label for="QusTenNo">No</label>
-                <input type="radio" id="QusTenNo"  name="tenthhQu" value="no" >
-                
-                </div>
-                
+
+  <div class="question-container" id="question7"> 
+    <h3>Santorini, famous for its white-washed buildings, is part of which country?</h3>
+    <label for="q7a">a) Italy</label>
+    <input type="radio" id="q7a"  name="q7" value="Italy">
+    <label for="q7b">b) Greece</label>
+    <input type="radio" id="q7b"  name="q7" value="Greece">
+    <label for="q7c">c) Spain</label>
+    <input type="radio" id="q7c"  name="q7" value="Spain">
+</div>
+
+<!-- Question 8 -->
+<div class="question-container" id="question8"> 
+    <h3>The Great Barrier Reef is located off the coast of which country?</h3>
+    <label for="q8a">a) Australia</label>
+    <input type="radio" id="q8a"  name="q8" value="Australia">
+    <label for="q8b">b) Maldives</label>
+    <input type="radio" id="q8b"  name="q8" value="Maldives">
+    <label for="q8c">c) Mexico</label>
+    <input type="radio" id="q8c"  name="q8" value="Mexico">
+</div>
+
+<!-- Question 9 -->
+<div class="question-container" id="question9"> 
+    <h3>In which U.S. state can you find the Grand Canyon?</h3>
+    <label for="q9a">a) California</label>
+    <input type="radio" id="q9a"  name="q9" value="California">
+    <label for="q9b">b) Arizona</label>
+    <input type="radio" id="q9b"  name="q9" value="Arizona">
+    <label for="q9c">c) Colorado</label>
+    <input type="radio" id="q9c"  name="q9" value="Colorado">
+</div>
+
+<!-- Question 10 -->
+<div class="question-container" id="question10"> 
+    <h3>What is the official language of Thailand?</h3>
+    <label for="q10a">a) Mandarin</label>
+    <input type="radio" id="q10a"  name="q10" value="Mandarin">
+    <label for="q10b">b) Thai</label>
+    <input type="radio" id="q10b"  name="q10" value="Thai">
+    <label for="q10c">c) Vietnamese</label>
+    <input type="radio" id="q10c"  name="q10" value="Vietnamese">
+</div>
          </div>
 
          <div class="buttons">

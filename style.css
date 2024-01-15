@@ -3,7 +3,6 @@
   --primary-color: #f4f6f7;
   --secondary-color: #f5f5f5;
   --text-color: #333333;
-  --button-hover-color: darken(var(--primary-color), 10%);
   --border-color: #dddddd;
 }
 
@@ -29,9 +28,9 @@ body {
   justify-content: space-between;
   text-align: center;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-  background-color: rgba(51, 51, 51, 0.3960784314);
+  background-color: rgba(255, 255, 255, 0.7137254902);
 }
 
 .questions {
@@ -41,7 +40,7 @@ body {
 .questions h1 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: rgb(56, 55, 55);
 }
 
 .buttons {
@@ -58,12 +57,15 @@ body {
   border: 1px solid var(--primary-color);
   padding: 20px;
   margin: 10px 0;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 .question-container h3 {
-  color: var(--primary-color);
+  color: rgb(56, 55, 55);
   font-weight: 200;
   font-size: 18px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 .question-container label {
   font-size: 16px;
@@ -79,40 +81,42 @@ body {
 
 #submitAnswersBtn {
   padding: 10px 20px;
-  background-color: rgba(128, 128, 128, 0.289);
-  color: white;
+  background-color: rgba(255, 0, 0, 0.17);
+  color: rgb(56, 55, 55);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
   transition: background-color 0.3s;
   border: 1px solid var(--border-color);
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 #submitAnswersBtn:hover {
-  background-color: rgba(255, 0, 0, 0.17);
+  background-color: rgba(255, 0, 0, 0.388);
 }
 
 #nextQuestionBtn {
   padding: 10px 20px;
   background-color: rgba(78, 254, 125, 0.289);
-  color: rgb(255, 255, 255);
+  color: rgb(56, 55, 55);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
   transition: background-color 0.3s;
   border: 1px solid var(--border-color);
+  width: 70%;
+  margin: auto;
 }
 #nextQuestionBtn:hover {
-  background-color: var(--button-hover-color);
+  background-color: rgba(78, 254, 125, 0.751);
 }
 
 .score-container {
   border: 1px solid var(--border-color);
   background-color: var(--primary-color);
-  color: #fff;
+  color: rgb(56, 55, 55);
   padding: 10px;
   margin-top: 20px;
 }
@@ -126,6 +130,11 @@ body {
   width: 20px;
   height: 20px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+
+.result-table {
+  font-size: 0.4rem;
+  color: rgb(56, 55, 55);
 }
 
 @keyframes flyAnimation {
