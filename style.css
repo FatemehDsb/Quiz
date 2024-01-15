@@ -18,6 +18,24 @@ body {
   background-image: url(annie-spratt-qyAka7W5uMY-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+
+body.dark-mode {
+  color: rgb(255, 255, 255);
+  background-image: url(rob-hayman-OxPtEsYUNAc-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.dark-mode .container {
+  background-color: rgba(49, 49, 49, 0.7137254902);
+}
+body.dark-mode .container .questions h3, body.dark-mode .container .questions h1 {
+  color: rgb(255, 255, 255);
+}
+body.dark-mode .container #submitAnswersBtn, body.dark-mode .container #nextQuestionBtn {
+  color: rgb(255, 255, 255);
 }
 
 .container {
@@ -137,35 +155,27 @@ body {
   color: rgb(56, 55, 55);
 }
 
-@keyframes flyAnimation {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
-  }
-  25% {
-    transform: translate(-50%, -50%) rotate(90deg);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(180deg);
-    opacity: 0;
-  }
-  75% {
-    transform: translate(-50%, -50%) rotate(270deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-    opacity: 0;
-  }
-}
-.airplane {
+.car {
   position: fixed;
   top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  width: 50px; /* Adjust the size of the airplane */
+  left: -50px;
+  width: 100px;
   height: 50px;
-  opacity: 0;
-  animation: flyAnimation 10s infinite;
+  transition: left 5s ease-in-out; /* Transition property for smooth movement */
+}
+
+body.dark-mode .car {
+  background-color: #2c3e50; /* Adjust the car color in dark mode */
+}
+
+@keyframes carMove {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: calc(100% - 50px); /* Move the car to the left edge of the viewport */
+  }
+}
+body .car.animation {
+  animation: carMove 10s infinite;
 }/*# sourceMappingURL=style.css.map */

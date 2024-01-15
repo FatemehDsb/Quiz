@@ -180,20 +180,17 @@ let changeModeImage = document.querySelector("#modImg");
 let isDarkMode = false;
 
 changeModeBtn.addEventListener("click", () => {
-    // Toggle between light and dark mode
-    isDarkMode = !isDarkMode;
+  // Toggle between light and dark mode
+  isDarkMode = !isDarkMode;
 
-    if (isDarkMode) {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'darkGray';
-        // Change the image for dark mode
-        changeModeImage.src = "light (1).png";
-        changeModeImage.alt = "";
-    } else {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-        // Change the image source for light mode
-        changeModeImage.src = "moon.png";
-        changeModeImage.alt = "Light Mode Image";
-    }
+  document.body.classList.toggle('dark-mode', isDarkMode);
+
+  // Change the image source based on mode
+  changeModeImage.src = isDarkMode ? "light (1).png" : "moon.png";
+  changeModeImage.alt = isDarkMode ? "" : "Light Mode Image";
 });
+
+
+
+let carElement = document.querySelector('.car');
+carElement.classList.add('animation');
