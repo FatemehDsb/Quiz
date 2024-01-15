@@ -18,8 +18,6 @@ body {
   background-image: url(annie-spratt-qyAka7W5uMY-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background-color 0.3s, color 0.3s;
-  overflow: hidden;
 }
 
 body.dark-mode {
@@ -133,7 +131,6 @@ body.dark-mode .container #submitAnswersBtn, body.dark-mode .container #nextQues
 
 .score-container {
   border: 1px solid var(--border-color);
-  background-color: var(--primary-color);
   color: rgb(56, 55, 55);
   padding: 10px;
   margin-top: 20px;
@@ -161,11 +158,7 @@ body.dark-mode .container #submitAnswersBtn, body.dark-mode .container #nextQues
   left: -50px;
   width: 100px;
   height: 50px;
-  transition: left 5s ease-in-out; /* Transition property for smooth movement */
-}
-
-body.dark-mode .car {
-  background-color: #2c3e50; /* Adjust the car color in dark mode */
+  transition: left 5s ease-in-out;
 }
 
 @keyframes carMove {
@@ -173,7 +166,7 @@ body.dark-mode .car {
     left: -50px;
   }
   100% {
-    left: calc(100% - 50px); /* Move the car to the left edge of the viewport */
+    left: calc(100% - 50px);
   }
 }
 body .car.animation {
